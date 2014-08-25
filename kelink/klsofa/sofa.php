@@ -1,0 +1,45 @@
+<?php
+date_default_timezone_set("PRC");
+ignore_user_abort(true);
+set_time_limit(0); //设置程序执行时间无限制
+$domain=$_GET['domain'];
+$sid=$_GET['sid'];
+$siteid=$_GET['siteid'];
+$geturl="{$domain}/bbs/book_list.aspx?action=new&siteid={$siteid}&classid=0&sid={$sid}";
+while(true){
+$getnew =file_get_contents($geturl);
+$start=strpos($getnew,"下一页</a>");
+$a=substr($getnew,$start,500);
+preg_match("/view\.aspx\?siteid=(\d+)&amp\;classid=(\d+)&amp\;id=(\d+)&amp\;/",$a,$newurl);
+$siteid=$newurl['1'];
+$classid=$newurl['2'];
+$id=$newurl['3'];
+$txt=file('reply.txt');
+if(!file_exists($sid)){
+file_put_contents($sid,"");
+}
+$getid=file_get_contents($sid);
+if($id!=trim($getid)){
+shuffle($txt);
+#要提交的数据串
+$postdata="action=add&id=$id&siteid=$siteid&lpage=1&content=$txt[2]&face=&classid=$classid&sid=$sid";
+#要提交到的网址
+$URL=$domain."/bbs/book_re.aspx";
+$ch=curl_init();
+curl_setopt($ch,CURLOPT_POST,1);
+curl_setopt($ch,CURLOPT_URL,$URL);
+curl_setopt($ch,CURLOPT_POSTFIELDS,$postdata);
+#打开缓存写入数据
+ob_start();
+curl_exec($ch);
+$result=ob_get_contents();
+#关闭缓存
+ob_end_clean();
+if(!preg_match("/请再过1秒后操作/",$result)){
+file_put_contents($sid,$id);
+}
+}
+file_put_contents('runtime.txt',date("Y-m-d H:i:s"));
+sleep(30);
+}
+?>

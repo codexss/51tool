@@ -1,0 +1,127 @@
+html,body,p,form,table,tr,td,th,tbody,input,span,div,h1,h2,h3,h4,h5,h6{
+padding: 0;
+margin: 0;
+}
+input{
+-webkit-box-shadow: 0 0 8px black;
+-moz-box-shadow: 0 0 8px black;
+border-radius: 4px;width: 280px;
+margin-bottom:5px;
+height: 23px;
+border: 1px solid #ABABAB;
+margin-top: 2px;
+background: #FFF;
+}
+textarea{
+-webkit-box-shadow: 0 0 8px black;
+-moz-box-shadow: 0 0 8px black;
+border-radius: 4px;
+width: 280px;
+margin-bottom:5px;
+height: 60px;
+border: 1px solid #ABABAB;
+margin-top: 2px;
+}
+select{
+-webkit-box-shadow: 0 0 8px black;
+-moz-box-shadow: 0 0 8px black;
+margin-bottom: 5px;
+width: 280px;
+border: 1px solid #B4B2B2;
+border-radius: 5px;
+height: 23px;
+}
+h1,h2,h3,h4,h5,h6,b,i,em{
+font-size:1em;font-weight:normal;font-style:normal}
+body{
+background-image:url("http://2.qweb.sinaapp.com/b.gif");color:#333;font-size:18px\9;line-height:1.5;word-wrap:break-word;
+font-size: 14px;width: 320px;margin: auto;
+}
+a{
+color: #333;
+text-decoration: none;
+
+}
+.a3{
+margin-top:10px;text-align:center;-webkit-box-shadow: 0 0 10px black;
+-moz-box-shadow: 0 0 10px black;
+padding: 4px;
+border-radius: 4px;
+}
+.h{
+color: #000;
+-moz-border-radius: 10px;
+border-radius: 4px;
+}
+.h a{
+color:#000
+}
+.h.as{
+float:right;text-align:right
+}
+.h h3{
+width:6.5em
+}
+.w{
+padding:0 10px;
+-webkit-box-shadow: 0 0 10px black;
+-moz-box-shadow: 0 0 10px black;
+padding: 4px;
+margin-top: 10px;
+margin-bottom: 10px;
+padding-left: 10px;
+background: #87CFC7;
+}
+.N1{
+-webkit-box-shadow: 0 0 10px black;
+-moz-box-shadow: 0 0 10px black;
+padding: 8px;
+border-radius: 4px;
+margin-top: 10px;
+}
+.w1{
+padding:3px 10px;
+}
+.w2{
+padding:10px
+}
+.W_min{
+background: #32959E;
+border-bottom: 1px solid#2C6C72;
+padding: 4px;
+border-radius: 4px;
+}
+.W_min,.W_min a{
+color:#FFF
+}
+.Header{
+margin-top:20px;
+background: #D5D5D5;
+}
+img.Logo{
+padding:12px 0;
+margin-bottom:0
+}
+.head{
+margin:0 auto;width:300px
+}
+.Ftr{
+background:#f3f3f3;border:none;border-radius: 4px;
+}
+.text{}
+.text2{
+width:220px;height:23px;border: 1px solid #ABABAB;
+}
+.text3{
+width:120px;height:23px;border: 1px solid #ABABAB;
+}
+.box{
+padding-left: 10px;margin-top:10px;background:#f3f3f3;border:none;border-radius: 4px;-webkit-box-shadow: 0 0 10px black;padding-right: 10px;
+}
+
+.err{
+padding-left: 10px;margin-top:10px;border:none;border-radius: 4px;-webkit-box-shadow: 0 0 10px black;
+}
+.xin{
+margin:0 auto;padding-left: 10px;margin-top:10px;border:none;border-radius: 4px;-webkit-box-shadow: 0 0 10px black;
+}
